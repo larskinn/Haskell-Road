@@ -57,10 +57,10 @@ Using explicit recursion:
 \begin{code}
   blowup :: String -> String
   blowup = blowHelper 1
-           where
-             blowHelper :: Int -> String -> String
-             blowHelper _ []     = []
-             blowHelper n (x:xs) = replicate n x ++ blowHelper (n+1) xs
+    where
+      blowHelper :: Int -> String -> String
+      blowHelper _ []     = []
+      blowHelper n (x:xs) = replicate n x ++ blowHelper (n+1) xs
 \end{code}
 
 More elegant solution:
