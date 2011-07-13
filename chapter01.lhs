@@ -53,9 +53,19 @@ Exercise 1.14
 -------------
 A function |blowup| that converts a string $a_1, a_2, a_3, \dots$ to $a_1, a_2, a_2, a_3, a_3, a_3 \dots$
 
-Note: I'm pretty sure this isn't what the author had in mind.
-
+Using explicit recursion:
 \begin{code}
   blowup :: String -> String
-  blowup = concat . (zipWith replicate [1..])
+  blowup = blowHelper 1
+  
+  blowHelper :: Int -> String -> String
+  blowHelper _ []     = []
+  blowHelper n (x:xs) = replicate n x ++ blowHelper (n+1) xs
 \end{code}
+
+More elegant solution:
+\begin{code}
+  blowup' :: String -> String
+  blowup' = concat . (zipWith replicate [1..])
+\end{code}
+
