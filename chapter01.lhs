@@ -48,3 +48,14 @@ A function |count| for counting the number of occurences of a character in a str
   count c (x:xs) | c == x    = 1 + count c xs
                  | otherwise = count c xs
 \end{code}
+
+Exercise 1.14
+-------------
+A function |blowup| that converts a string $a_1, a_2, a_3, \dots$ to $a_1, a_2, a_2, a_3, a_3, a_3 \dots$
+
+Note: I'm pretty sure this isn't what the author had in mind.
+
+\begin{code}
+  blowup :: String -> String
+  blowup = concat . (zipWith replicate [1..])
+\end{code}
