@@ -69,3 +69,23 @@ More elegant solution:
   blowup' = concat . (zipWith replicate [1..])
 \end{code}
 
+Exercise 1.15
+-------------
+A function |srtString :: [String] -> [String]| that sorts a list of strings in alphabetical order
+
+\begin{code}
+  srtString :: [String] -> [String]
+  srtString [] = []
+  srtString xs = m : (srtString (removeString m xs))
+    where m = mnmString xs
+
+  removeString :: String -> [String] -> [String]
+  removeString _ []     = []
+  removeString m (x:xs) | m == x    = xs
+                        | otherwise = x : removeString m xs
+
+  mnmString :: [String] -> String
+  mnmString []     = []
+  mnmString [x]    = x
+  mnmString (x:xs) = min x (mnmString xs)
+\end{code}
