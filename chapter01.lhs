@@ -126,3 +126,28 @@ Find expressions with the following types:
 
 5. Bool -> Bool  
    answer: not
+
+Exercise 1.19
+-------------
+Find the types of the following predefined functions, supply them with arguments of the expected types, and try to guess what they do.
+
+1. head :: [a] -> a  
+   returns the first element from a list
+
+2. last :: [a] -> a  
+   returns the last element from a list
+
+3. init :: [a] -> [a]  
+   returns a new list with the last element from the old list removed
+
+4. fst :: (a,b) -> a  
+   returns the first element of a pair
+
+5. (++) :: [a] -> [a] -> [a]  
+   returns a list with the contents of the second list appended to the end of the first list
+
+6. flip :: (a -> b -> c) -> b -> a -> c  
+   given a function of 2 arguments, returns a function with the order of the two arguments interchanged
+
+7. flip (++) :: [a] -> [a] -> [a]  
+   returns a list with the contents of the first list appended to the end of the second list
