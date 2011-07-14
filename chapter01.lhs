@@ -169,3 +169,15 @@ Use |map| to write a function |sumLengths| that takes a list of lists and return
   sumLengths :: [[a]] -> Int
   sumLengths = sum . map length
 \end{code}
+
+Exercise 1.22
+-------------
+We modify the defining equation of |ldp| as follows:
+\begin{spec}
+  ldp :: Integer -> Integer
+  ldp = ldpf primes1
+\end{spec}
+
+Now, ldp works exactly as though we had written |ldp n = ldpf primes1 n|.
+
+ldpf is a function of type |[Integer] -> Integer -> Integer|. What we did above was to supply it with only a first argument, causing it to return a function of type |Integer -> Integer| -- which is what we wanted for ldp.
