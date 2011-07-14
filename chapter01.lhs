@@ -112,17 +112,17 @@ Exercise 1.18
 -------------
 Find expressions with the following types:
 
-1.      [String]  
-answer: ["Text", "More text"]
+1. [String]  
+   answer: ["Text", "More text"]
 
-2.      (Bool,String)
-answer: (True, "Indeed")
+2. (Bool,String)  
+   answer: (True, "Indeed")
 
-3.      [(Bool,String)]
-answer: [(True, "Yes"), (False, "No")]
+3. [(Bool,String)]  
+   answer: [(True, "Yes"), (False, "No")]
 
-4.      ([Bool],String)
-answer: ([True, False], "What?")
+4. ([Bool],String)  
+   answer: ([True, False], "What?")
 
-5.      Bool -> Bool
-answer: not
+5. Bool -> Bool  
+   answer: not
