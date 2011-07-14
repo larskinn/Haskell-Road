@@ -160,3 +160,12 @@ Use |map| to write a function |lengths| that takes a list of lists and returns a
   lengths :: [[a]] -> [Int]
   lengths = map length
 \end{code}
+
+Exercise 1.21
+-------------
+Use |map| to write a function |sumLengths| that takes a list of lists and returns the sum of their lenghts.
+
+\begin{code}
+  sumLengths :: [[a]] -> Int
+  sumLengths = sum . map length
+\end{code}
