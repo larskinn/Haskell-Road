@@ -151,3 +151,12 @@ Find the types of the following predefined functions, supply them with arguments
 
 7. flip (++) :: [a] -> [a] -> [a]  
    returns a list with the contents of the first list appended to the end of the second list
+
+Exercise 1.20
+-------------
+Use |map| to write a function |lengths| that takes a list of lists and returns a list of the corresponding list lengths.
+
+\begin{code}
+  lengths :: [[a]] -> [Int]
+  lengths = map length
+\end{code}
