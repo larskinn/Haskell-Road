@@ -107,3 +107,22 @@ A function |substring :: String -> String -> Bool| that checks whether |str1| is
                       | substring xs ys  = True
                       | otherwise        = False
 \end{code}
+
+Exercise 1.18
+-------------
+Find expressions with the following types:
+
+1.      [String]  
+answer: ["Text", "More text"]
+
+2.      (Bool,String)
+answer: (True, "Indeed")
+
+3.      [(Bool,String)]
+answer: [(True, "Yes"), (False, "No")]
+
+4.      ([Bool],String)
+answer: ([True, False], "What?")
+
+5.      Bool -> Bool
+answer: not
