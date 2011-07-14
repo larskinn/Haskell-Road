@@ -101,6 +101,7 @@ A function |substring :: String -> String -> Bool| that checks whether |str1| is
   prefix (x:xs) (y:ys) = (x==y) && prefix xs ys
 
   substring :: String -> String -> Bool
+  substring [] _                         = True
   substring _  []                        = False
   substring xs (y:ys) | prefix xs (y:ys) = True
                       | substring xs ys  = True
