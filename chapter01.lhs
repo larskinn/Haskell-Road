@@ -89,3 +89,20 @@ A function |srtString :: [String] -> [String]| that sorts a list of strings in a
   mnmString [x]    = x
   mnmString (x:xs) = min x (mnmString xs)
 \end{code}
+
+Exercise 1.17
+-------------
+A function |substring :: String -> String -> Bool| that checks whether |str1| is a substring of |str2|.
+
+\begin{code}
+  prefix :: String -> String -> Bool
+  prefix []     ys     = True
+  prefix (x:xs) []     = False
+  prefix (x:xs) (y:ys) = (x==y) && prefix xs ys
+
+  substring :: String -> String -> Bool
+  substring _  []                        = False
+  substring xs (y:ys) | prefix xs (y:ys) = True
+                      | substring xs ys  = True
+                      | otherwise        = False
+\end{code}
