@@ -9,4 +9,4 @@ The truth table for the *exclusive* version of |or|:
  t | t |    f  
  t | f |    t  
  f | t |    t  
- f | f |    F
+ f | f |    f
