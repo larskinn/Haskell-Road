@@ -1,3 +1,5 @@
 My solutions to the exercises in The Haskell Road to Logic, Maths and Programming by Kees Doets & Jan van Eijck.
 
-The solutions are written in literal Haskell, using Markdown.
+The solutions are written in literal Haskell, using LaTeX. The chapters can be compiled to pdf using lhs2TeX and pdflatex, e.g.
+    
+    lhs2TeX -o chapter01.tex chapter01.lhs && pdflatex chapter01.tex

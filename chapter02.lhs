@@ -1,35 +1,63 @@
-Exercises from Chapter 2
-========================
+\documentclass{article}
+%include polycode.fmt
+%format <+> = "\xor"
+%format <=> = "\iff"
 
-Exercise 2.2
-------------
-The truth table for the *exclusive* version of *or*:
- 
- P | Q | P XOR Q  
- t | t |    f  
- t | f |    t  
- f | t |    t  
- f | f |    f
+\renewcommand{\iff}{\Leftrightarrow}
+\newcommand{\xor}{\oplus}
 
-Exercise 2.4
-------------
-The truth table for |not (P <=> Q)|:
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\begin{document}
 
- P | Q | P <=> Q | not (P <=> Q)  
- t | t |    t    |       f  
- t | f |    f    |       t  
- f | t |    f    |       t  
- f | f |    t    |       f  
+\section*{Exercises from Chapter 2}
 
-As we can see, the the column for |not (P <=> Q)| is identical to the column for |P XOR Q| in exercise 2.2. Then |x <+> y = not (x <=> y) = not (x == y) = x /= y|, and the implementation of |<+>| is correct.
+\subsection*{Exercise 2.2}
+The truth table for the \emph{exclusive} version of \emph{or}:
 
-Exercise 2.9
-------------
+\begin{tabular}{ccc}
+  \hline
+  $P$ & $Q$ & $P \xor Q$ \\
+  \hline
+   t  &  t  &      f \\
+   t  &  f  &      t \\
+   f  &  t  &      t \\
+   f  &  f  &      f \\
+  \hline
+\end{tabular}
 
-(P <+> Q) <+> Q <=> P
- t  f  t   t  t  t  t
- t  t  f   t  f  t  t
- f  t  t   f  t  t  f
- f  f  f   f  f  t  f
+\subsection*{Exercise 2.4}
+The truth table for $\neg (P \iff Q)$:
 
-|(P <+> Q) <+> Q <=> P| is a logical validity, thus |(P <+> Q) <+> Q| is equivalent to |P|.
+\begin{tabular}{cccc}
+  \hline
+  $P$ & $Q$ & $P \iff Q$ & $\neg (P \iff Q)$ \\
+  \hline
+  t & t &    t    &       f \\
+  t & f &    f    &       t \\
+  f & t &    f    &       t \\
+  f & f &    t    &       f \\
+  \hline
+\end{tabular}
+
+As we can see, the the column for $\neg (P \iff Q)$ is identical to the column for $P \xor Q$ in exercise 2.2. Then
+\begin{spec}
+  x <+> y = not (x <=> y) = not (x == y) = x /= y
+\end{spec}
+Thus the implementation of |(<+>)| is correct.
+
+\subsection*{Exercise 2.9}
+\begin{tabular}{ccccccc}
+  \hline
+  $(P$ & $\iff$ & $Q)$ & $\xor$ & $Q$ & $\iff$ & $P$ \\
+  \hline
+   t  &  f  & t  &  t  & t &  t  & t \\
+   t  &  t  & f  &  t  & f &  t  & t \\
+   f  &  t  & t  &  f  & t &  t  & f \\
+   f  &  f  & f  &  f  & f &  t  & f \\
+  \hline
+\end{tabular}
+
+$(P \xor Q) \xor Q \iff P$ is a logical validity, thus $(P \xor Q) \xor Q$ is equivalent to $P$.
+
+\end{document}
