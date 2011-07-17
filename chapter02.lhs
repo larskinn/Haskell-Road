@@ -248,5 +248,39 @@ $(P \xor Q) \xor Q \iff P$ is a logical validity, thus $(P \xor Q) \xor Q$ is eq
    f  &    f   &   f  &    f   &  f   &   t    &   f  &   f    &  f   &   f    &  f  \\
   \hline
 \end{tabular}
+
+\item Distribution laws:
+
+\begin{tabular}{ccccccccccccc}
+  \hline
+  $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ & $\iff$ & $(P$ & $\land$ & $Q)$ & $\lor$ & $(P$ & $\land$ & $R)$ \\
+  \hline
+   t  &    t    &   t  &    t   &  t   &    t   &   t  &    t    &  t   &    t   &   t  &    t    &  t   \\
+   t  &    t    &   t  &    t   &  f   &    t   &   t  &    t    &  t   &    t   &   t  &    f    &  f   \\
+   t  &    t    &   f  &    t   &  t   &    t   &   t  &    f    &  f   &    t   &   t  &    t    &  t   \\
+   t  &    f    &   f  &    f   &  f   &    t   &   t  &    f    &  f   &    f   &   t  &    f    &  f   \\
+   f  &    f    &   t  &    t   &  t   &    t   &   f  &    f    &  t   &    f   &   f  &    f    &  t   \\
+   f  &    f    &   t  &    t   &  f   &    t   &   f  &    f    &  t   &    f   &   f  &    f    &  f   \\
+   f  &    f    &   f  &    t   &  t   &    t   &   f  &    f    &  f   &    f   &   f  &    f    &  t   \\
+   f  &    f    &   f  &    f   &  f   &    t   &   f  &    f    &  f   &    f   &   f  &    f    &  f   \\
+  \hline
+\end{tabular}
+
+
+\begin{tabular}{ccccccccccccc}
+  \hline
+  $P$ & $\lor$ & $(Q$ & $\land$ & $R)$ & $\iff$ & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ \\
+  \hline
+   t  &    t   &   t  &    t    &  t   &    t   &   t  &    t   &  t   &    t    &   t  &    t   &  t   \\
+   t  &    t   &   t  &    f    &  f   &    t   &   t  &    t   &  t   &    t    &   t  &    t   &  f   \\
+   t  &    t   &   f  &    f    &  t   &    t   &   t  &    t   &  f   &    t    &   t  &    t   &  t   \\
+   t  &    t   &   f  &    f    &  f   &    t   &   t  &    t   &  f   &    t    &   t  &    t   &  f   \\
+   f  &    t   &   t  &    t    &  t   &    t   &   f  &    t   &  t   &    t    &   f  &    t   &  t   \\
+   f  &    f   &   t  &    f    &  f   &    t   &   f  &    t   &  t   &    f    &   f  &    f   &  f   \\
+   f  &    f   &   f  &    f    &  t   &    t   &   f  &    f   &  f   &    f    &   f  &    t   &  t   \\
+   f  &    f   &   f  &    f    &  f   &    t   &   f  &    f   &  f   &    f    &   f  &    f   &  f   \\
+  \hline
+\end{tabular}
+
 \end{enumerate}
 \end{document}
