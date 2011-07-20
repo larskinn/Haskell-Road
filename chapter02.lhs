@@ -302,4 +302,19 @@ Checks for the principles from Theorem 2.12:
   test'6   =  logEquiv1 (\ p -> p && not p) (\ p -> False)
 \end{code}
 
+\subsection*{Exercise 2.15}
+Contradiction tests for propositional functions with one, two and three variables:
+\begin{code}
+  bools = [True, False]
+
+  contra1     ::  (Bool -> Bool) -> Bool
+  contra1 bf  =   and [not (bf p) | p <- bools]
+
+  contra2     ::  (Bool -> Bool -> Bool) -> Bool
+  contra2 bf  =   and [not (bf p q) |  p <- bools, q <- bools]
+
+  contra3     ::  (Bool -> Bool -> Bool -> Bool) -> Bool
+  contra3 bf  =   and [not (bf p q r) |  p <- bools, q <- bools, r <- bools]
+\end{code}
+
 \end{document}
