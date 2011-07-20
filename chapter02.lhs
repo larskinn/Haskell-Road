@@ -9,6 +9,7 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
 \begin{document}
 
 \section*{Exercises from Chapter 2}
@@ -266,7 +267,6 @@ $(P \xor Q) \xor Q \iff P$ is a logical validity, thus $(P \xor Q) \xor Q$ is eq
   \hline
 \end{tabular}
 
-
 \begin{tabular}{ccccccccccccc}
   \hline
   $P$ & $\lor$ & $(Q$ & $\land$ & $R)$ & $\iff$ & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ \\
@@ -281,6 +281,6 @@ $(P \xor Q) \xor Q \iff P$ is a logical validity, thus $(P \xor Q) \xor Q$ is eq
    f  &    f   &   f  &    f    &  f   &    t   &   f  &    f   &  f   &    f    &   f  &    f   &  f   \\
   \hline
 \end{tabular}
-
 \end{enumerate}
+
 \end{document}
