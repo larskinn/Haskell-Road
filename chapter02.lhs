@@ -4,11 +4,13 @@
 %format <=> = "\iff"
 %format ==> = "\Longrightarrow"
 
+\usepackage{amsmath}
+
 \long\def\ignore#1{}
 
 \renewcommand{\iff}{\Leftrightarrow}
 \newcommand{\xor}{\oplus}
-\newcommand{\implies}{\Rightarrow}
+\renewcommand{\implies}{\Rightarrow}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
