@@ -2,6 +2,9 @@
 %include polycode.fmt
 %format <+> = "\xor"
 %format <=> = "\iff"
+%format ==> = "\Longrightarrow"
+
+\long\def\ignore#1{}
 
 \renewcommand{\iff}{\Leftrightarrow}
 \newcommand{\xor}{\oplus}
@@ -282,5 +285,21 @@ $(P \xor Q) \xor Q \iff P$ is a logical validity, thus $(P \xor Q) \xor Q$ is eq
   \hline
 \end{tabular}
 \end{enumerate}
+
+\subsection*{Exercise 2.13}
+Checks for the principles from Theorem 2.12:
+\begin{code}
+  import TAMO
+
+  test'1a  =  not True == False
+  test'1b  =  not False == True
+  test'2   =  logEquiv1 (\ p -> p ==> False) (\ p -> not p)
+  test'3a  =  logEquiv1 (\ p -> p || True) (\ p -> True)
+  test'3b  =  logEquiv1 (\ p -> p && False) (\ p -> False)
+  test'4a  =  logEquiv1 (\ p -> p || False) id
+  test'4b  =  logEquiv1 (\ p -> p && True) id
+  test'5   =  logEquiv1 (\ p -> p || not p) (\ p -> True)
+  test'6   =  logEquiv1 (\ p -> p && not p) (\ p -> False)
+\end{code}
 
 \end{document}
