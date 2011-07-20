@@ -327,4 +327,10 @@ Useful denials for every sentence of Exercise 2.31:
   \item There are a finite number of primes.
 \end{enumerate}
 
+\subsection*{Exercise 2.17}
+A denial for the statement that $x < y < z$ (where $x,y,z \in \mathbb{R}$):
+
+$x < y < z \equiv x < y \land y < z$. Thus we can use the First Law of DeMorgan. 
+\[ \neg (x < y < z) \equiv \neg (x < y \land y < z) \equiv x \geq y \lor y \geq z \]
+
 \end{document}
