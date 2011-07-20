@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[leqno]{article}
 %include polycode.fmt
 %format <+> = "\xor"
 %format <=> = "\iff"
@@ -334,5 +334,34 @@ A denial for the statement that $x < y < z$ (where $x,y,z \in \mathbb{R}$):
 
 $x < y < z \equiv x < y \land y < z$. Thus we can use the First Law of DeMorgan. 
 \[ \neg (x < y < z) \equiv \neg (x < y \land y < z) \equiv x \geq y \lor y \geq z \]
+
+\subsection*{Exercise 2.18}
+\begin{equation*}
+  \tag*{1.}
+  \begin{aligned}
+    (\Phi \iff \Psi) & \equiv ((\Phi \implies \Psi) \land (\Psi \implies \Phi))
+                       && \text{by Theorem 2.10, 5} \\
+                     & \equiv ((\neg \Psi \implies \neg \Phi) \land (\neg \Phi \implies \neg \Psi))
+                       && \text{by contraposition} \\
+                     & \equiv ((\neg \Phi \implies \neg \Psi) \land (\neg \Psi \implies \neg \Phi))
+                       && \text{by commutativity of } \land \\
+                     & \equiv (\neg \Phi \iff \neg \Psi)
+                       && \text{by Theorem 2.10, 5}
+  \end{aligned}
+\end{equation*}
+
+\begin{equation*}
+  \tag*{2.}
+  \begin{aligned}
+    (\neg \Phi \iff \Psi) & \equiv ((\neg \Phi \implies \Psi) \land (\Psi \implies \neg \Phi))
+                            && \text{by Theorem 2.10, 5} \\
+                          & \equiv ((\neg \Psi \implies \Phi) \land (\Phi \implies \neg \Psi))
+                            && \text{by contraposition} \\
+                          & \equiv ((\Phi \implies \neg \Psi) \land (\neg \Psi \implies \Phi))
+                            && \text{by commutativity of } \land \\
+                          & \equiv (\Phi \iff \neg \Psi)
+                            && \text{by Theorem 2.10, 5}
+  \end{aligned}
+\end{equation*}
 
 \end{document}
