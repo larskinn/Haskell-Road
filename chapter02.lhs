@@ -317,4 +317,14 @@ Contradiction tests for propositional functions with one, two and three variable
   contra3 bf  =   and [not (bf p q r) |  p <- bools, q <- bools, r <- bools]
 \end{code}
 
+\subsection*{Exercise 2.16}
+Useful denials for every sentence of Exercise 2.31:
+\begin{enumerate}
+  \item The equation $x^2 + 1 = 0$ does not have a solution.
+  \item A largest natural number exists.
+  \item The number 13 is not prime.
+  \item The number $n$ is not prime.
+  \item There are a finite number of primes.
+\end{enumerate}
+
 \end{document}
