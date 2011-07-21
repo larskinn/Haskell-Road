@@ -364,4 +364,10 @@ $x < y < z \equiv x < y \land y < z$. Thus we can use the First Law of DeMorgan.
   \end{aligned}
 \end{equation*}
 
+\subsection*{Exercise 2.19}
+$\Phi \equiv \Psi$ means that, no matter the truth values of $P, Q, \dots$ occuring in the formulas, the formulas $\Phi$ and $\Psi$ produce the same truth values: either both are true, or both are false. In both situations, $\Phi \iff \Psi$ is true.
+Thus $(\Phi \equiv \Psi) \implies (\Phi \iff \Psi)$.
+
+Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth values, we also have $(\Phi \iff \Psi) \implies (\Phi \equiv \Psi)$. By part 5 of Theorem 2.10 we conclude that $(\Phi \equiv \Psi) \iff (\Phi \iff \Psi)$.
+
 \end{document}
