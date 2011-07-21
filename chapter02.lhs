@@ -370,4 +370,130 @@ Thus $(\Phi \equiv \Psi) \implies (\Phi \iff \Psi)$.
 
 Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth values, we also have $(\Phi \iff \Psi) \implies (\Phi \equiv \Psi)$. By part 5 of Theorem 2.10 we conclude that $(\Phi \equiv \Psi) \iff (\Phi \iff \Psi)$.
 
+\subsection*{Exercise 2.20}
+\begin{enumerate}
+  \item $\neg P \implies Q$ and $P \implies \neg Q$ are not equivalent. The truth table below shows that $(\neg P \implies Q) \iff (P \implies \neg Q)$ is not a logical validity:
+        \begin{center}
+        \begin{tabular}{ccccccccc}
+          \hline
+          $(\neg$ & $P$ & $\implies$ & $Q)$ & $\iff$ & $(P$ & $\implies$ & $\neg$ & $Q)$ \\
+          \hline
+              f   &  t  &      t     &  t   &    f   &   t  &      f     &    f   &  t   \\
+              f   &  t  &      t     &  f   &    t   &   t  &      t     &    t   &  f   \\
+              t   &  f  &      t     &  t   &    t   &   f  &      t     &    f   &  t   \\
+              t   &  f  &      f     &  f   &    f   &   f  &      t     &    t   &  f   \\
+          \hline
+        \end{tabular}
+        \end{center}
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv2 (\ p q -> not p ==> q) (\ p q -> p ==> not q)
+          False
+        \end{spec}
+
+  \item $\neg P \implies Q$ and $Q \implies \neg P$ are not equivalent. By part 4 of Theorem 2.10 we see that $Q \implies \neg P$ is the contrapositive of $P \implies \neg Q$, which we have already shown to be non-equivalent to $\neg P \implies Q$.
+
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv2 (\ p q -> not p ==> q) (\ p q -> q ==> not p)
+          False
+        \end{spec}
+
+  \item $\neg P \implies Q$ and $\neg Q \implies P$ are equivalent, by part 4 of Theorem 2.10.
+
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv2 (\ p q -> not p ==> q) (\ p q -> not q ==> p)
+          True
+        \end{spec}
+
+  \item $P \implies (Q \implies R)$ and $Q \implies (P \implies R)$ are equivalent:
+        \begin{align*}
+          (P \implies (Q \implies R))   &\equiv \neg P \lor (\neg Q \lor R)
+            && \text{by Theorem 2.10, part 3} \\
+                                        &\equiv \neg P \lor \neg Q \lor R
+            && \text{by associativity of } \lor \\
+                                        &\equiv \neg Q \lor \neg P \lor R
+            && \text{by commutativity of } \lor \\
+                                        &\equiv \neg Q \lor (\neg P \lor R)
+            && \text{by associativity of } \lor \\
+                                        &\equiv (Q \implies (P \implies R))
+            && \text{by Theorem 2.10, part 3}
+        \end{align*}
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv3 (\ p q r -> p ==> (q ==> r)) (\ p q r -> q ==> (p ==> r))
+          True
+        \end{spec}
+
+  \item $P \implies (Q \implies R)$ and $(P \implies Q) \implies R$ are not equivalent:
+        \begin{align*}
+          (P \implies (Q \implies R))   &\equiv \neg P \lor (\neg Q \lor R)
+            && \text{by Theorem 2.10, part 3} \\
+                                        &\equiv \neg P \lor \neg Q \lor R
+            && \text{by associativity of } \lor \\
+                                        &\equiv \neg (P \land Q) \lor R
+            && \text{by DeMorgan} \\
+                                        &\equiv (P \land Q) \implies R
+            && \text{by Theorem 2.10, part 3} \\
+        \end{align*}
+        Now, if $(P \land Q) \implies R$ and $(P \implies Q) \implies R$ are equivalent,
+        then $P \land Q$ and $P \implies Q$ must also be equivalent. We check using a truth table:
+        \begin{center}
+        \begin{tabular}{ccccccc}
+          \hline
+          $P$ & $\land$ & $Q$ & $\iff$ & $(P$ & $\implies$ & $Q)$ \\
+          \hline
+           t  &    t    &  t  &    t   &   t  &      t     &  t   \\
+           t  &    f    &  f  &    t   &   t  &      f     &  f   \\
+           f  &    f    &  t  &    f   &   f  &      t     &  t   \\
+           f  &    f    &  f  &    f   &   f  &      t     &  f   \\
+          \hline
+        \end{tabular}
+        \end{center}
+        As we can see from the $\iff$ column, the two are not equivalent. Thus $P \implies (Q \implies R)$ and $(P \implies Q) \implies R$ are not equivalent.
+
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv3 (\ p q r -> p ==> (q ==> r)) (\ p q r -> (p ==> q) ==> r)
+          False
+        \end{spec}
+
+  \item $(P \implies Q) \implies P$ and $P$ are equivalent:
+        \begin{center}
+        \begin{tabular}{ccccccc}
+          \hline
+          $(P$ & $\implies$ & $Q)$ & $\implies$ & $P$ & $\iff$ & $P$ \\
+          \hline
+            t  &      t     &  t   &     t      &  t  &    t   &  t  \\
+            t  &      f     &  f   &     t      &  t  &    t   &  t  \\
+            f  &      t     &  t   &     f      &  f  &    t   &  f  \\
+            f  &      t     &  f   &     f      &  f  &    t   &  f  \\
+          \hline
+        \end{tabular}
+        \end{center}
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv2 (\ p q -> (p ==> q) ==> p) (\ p q -> p)
+          True
+        \end{spec}
+  
+  \item $P \lor Q \implies R$ and $(P \implies R) \land (Q \implies R)$ are equivalent:
+        \begin{align*}
+          (P \lor Q \implies R) &\equiv \neg (P \lor Q) \lor R
+              && \text{by Theorem 2.10, part 3} \\
+                                &\equiv (\neg P \land \neg Q) \lor R
+              && \text{by DeMorgan} \\
+                                &\equiv (\neg P \lor R) \land (\neg Q \lor R)
+              && \text{by distribution} \\
+                                &\equiv (P \implies R) \land (Q \implies R)
+              && \text{by Theorem 2.10, part 3}
+        \end{align*}
+        Verifying with Haskell:
+        \begin{spec}
+          logEquiv3 (\ p q r -> p || q ==> r) (\ p q r -> (p ==> r) && (q ==> r))
+          True
+        \end{spec}
+\end{enumerate}
+
 \end{document}
