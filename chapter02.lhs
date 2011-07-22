@@ -496,4 +496,236 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
         \end{spec}
 \end{enumerate}
 
+\subsection*{Exercise 2.21}
+\begin{enumerate}
+  \item
+  Let $\Phi$ be defined as $P \lor \neg Q$. Now $\Phi$ has the desired truth table:
+  \begin{center}
+    \begin{tabular}{cccc||c}
+      \hline
+      $P$ & $\lor$ & $\neg$ & $Q$ & $\Phi$ \\
+      \hline
+       t  &    t   &    f   &  t  &    t   \\
+       t  &    t   &    t   &  f  &    t   \\
+       f  &    f   &    f   &  t  &    f   \\
+       f  &    t   &    t   &  f  &    t   \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  \item
+  There are a total of $2^4 = 16$ truth tables for 2-letter formulas.
+
+  \item
+  All 16 truth tables, with formulas, are listed in table~\ref{tab:2letterformulas} on page~\pageref{tab:2letterformulas}.
+
+  \begin{table}
+  \begin{tabular}{ll}
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    f   \\
+         f  &  t  &    f   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \land \neg P$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    f   \\
+         f  &  t  &    f   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg (P \lor Q)$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    f   \\
+         f  &  t  &    t   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg P \land Q$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    f   \\
+         f  &  t  &    t   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg P$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    t   \\
+         f  &  t  &    f   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \land \neg Q$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    t   \\
+         f  &  t  &    f   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg Q$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    t   \\
+         f  &  t  &    t   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := (P \land \neg Q) \lor (\neg P \land Q)$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    f   \\
+         t  &  f  &    t   \\
+         f  &  t  &    t   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg (P \land Q)$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    f   \\
+         f  &  t  &    f   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \land Q$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    f   \\
+         f  &  t  &    f   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := (P \land Q) \lor \neg (P \lor Q)$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    f   \\
+         f  &  t  &    t   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := Q$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    f   \\
+         f  &  t  &    t   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := \neg P \lor Q$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    t   \\
+         f  &  t  &    f   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    t   \\
+         f  &  t  &    f   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \lor \neg Q$
+      \\
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    t   \\
+         f  &  t  &    t   \\
+         f  &  f  &    f   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \lor Q$
+      &
+      \begin{tabular}{||cc||c||}
+        \hline
+        $P$ & $Q$ & $\Phi$ \\
+        \hline
+         t  &  t  &    t   \\
+         t  &  f  &    t   \\
+         f  &  t  &    t   \\
+         f  &  f  &    t   \\
+        \hline
+      \end{tabular}
+      \quad $\Phi := P \lor \neg P$
+  \end{tabular}
+  \caption{The 16 truth tables for 2-letter formulas}
+  \label{tab:2letterformulas}
+  \end{table}
+
+  \item
+  I do not know if there is a general method for finding these formulas.
+  There probably is, seeing as constructing the above formulas was very easy,
+  but I am unable to precisely define the process.
+
+  \item
+  There would be a total of $2^8 = 256$ truth tables for 3-letter formulas.
+  As for the question of a general method of finding the formulas, see the previous
+  answer.
+\end{enumerate}
+
 \end{document}
