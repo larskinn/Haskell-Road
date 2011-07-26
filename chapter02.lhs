@@ -751,23 +751,23 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
 \subsection*{Exercise 2.31}
 \begin{enumerate}
   \item
-  The equation $x^2 + 1 = 0$ has a solution: \\
+  The equation $x^2 + 1 = 0$ has a solution:
   \[ \exists x~(x^2 + 1 = 0) \]
 
   \item
-  A largest natural number does not exist: \\
+  A largest natural number does not exist:
   \[ \forall x \in \mathbb{N}~\exists y \in \mathbb{N}~(x < y) \]
 
   \item
-  The number 13 is prime ($d||n$ means `$d$ divides $n$'): \\
+  The number 13 is prime ($d||n$ means `$d$ divides $n$'):
   \[ \forall d~(d||13 \implies d = 1 \lor d = 13) \]
 
   \item
-  The number $n$ is prime: \\
+  The number $n$ is prime:
   \[ \forall d~(n \neq 1 \land (d||n \implies d = 1 \lor d = n)) \]
 
   \item
-  There are infinitely many primes: \\
+  There are infinitely many primes:
   \[ \forall x~(\exists n \forall d~
    (n \neq 1 \land (d||n \implies d = 1 \lor d = n) \land x < n)) \]
 \end{enumerate}
@@ -775,7 +775,7 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
 \subsection*{Exercise 2.32}
 \begin{enumerate}
   \item
-  Everyone loved Diana ($L(x,y)$ means `$x$ loved $y$', $d$ is Diana): \\
+  Everyone loved Diana ($L(x,y)$ means `$x$ loved $y$', $d$ is Diana):
   \[ \forall x ~ L(x,d) \]
 
   \item
@@ -783,30 +783,30 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
   \[ \forall x ~ L(d,x) \]
 
   \item
-  Man is mortal ($M(x)$ means `$x$ is a man', $M'(x)$ means `$x$ is mortal'): \\
+  Man is mortal ($M(x)$ means `$x$ is a man', $M'(x)$ means `$x$ is mortal'):
   \[ \forall x ~ (M(x) \implies M'(x)) \]
 
   \item
-  Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'): \\
+  Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'):
   \[ \exists x ~ (B(x) \land \neg F(x)) \]
 \end{enumerate}
 
 \subsection*{Exercise 2.33}
 \begin{enumerate}
   \item
-  Dogs that bark do not bite: \\
+  Dogs that bark do not bite:
   \[ \forall x ~ (\text{Dog}(x) \land \text{Bark}(x) \implies \neg \text{Bite}(x)) \]
 
   \item
-  All that glitters is not gold: \\
+  All that glitters is not gold:
   \[ \exists x ~ (\text{Glitters}(x) \land \neg \text{Gold}(x)) \]
 
   \item
-  Friends of Diana's friends are her friends: \\
+  Friends of Diana's friends are her friends:
   \[ \forall x,y ~ (\text{Friend}(d,x) \land \text{Friend}(x,y) \implies \text{Friend}(d,y)) \]
 
   \item
-  The limit of $\frac{1}{n}$ as $n$ approaches infinity is zero: \\
+  The limit of $\frac{1}{n}$ as $n$ approaches infinity is zero:
   \[ \lim_{n \to \infty} \frac{1}{n} = 0 \]
 \end{enumerate}
 
