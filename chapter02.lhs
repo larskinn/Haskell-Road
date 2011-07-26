@@ -729,69 +729,66 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
 \end{enumerate}
 
 \subsection*{Exercise 2.26}
-\begin{enumerate}
-  \item
-  $\exists x,y \in \mathbb{Q} ~ (x < y)$
-
-  \item
-  $\forall x \in \mathbb{R} ~ \exists y \in {R} ~ (x < y)$
-
-  \item
-  $\forall x \in \mathbb{Z} ~ \exists m,n \in \mathbb{N} ~ (x = m - n)$
-\end{enumerate}
+\setcounter{equation}{0}
+\begin{gather}
+  \exists x,y \in \mathbb{Q} ~ (x < y)
+  \\
+  \forall x \in \mathbb{R} ~ \exists y \in {R} ~ (x < y)
+  \\
+  \forall x \in \mathbb{Z} ~ \exists m,n \in \mathbb{N} ~ (x = m - n)
+\end{gather}
 
 \subsection*{Exercise 2.27}
-\begin{enumerate}
-  \item
-  $\forall x ~ (x \in \mathbb{Q} \implies
-   \exists m,n ~ (m \in \mathbb{Z} \land n \in \mathbb{Z} \implies
-   n \neq 0 \land x = m/n))$
-
-  \item
-  $\forall x,y ~ (x \in F \land y \in D \implies (Oxy \implies Bxy))$
-\end{enumerate}
+\setcounter{equation}{0}
+\begin{gather}
+  \forall x ~ (x \in \mathbb{Q} \implies
+  \exists m,n ~ (m \in \mathbb{Z} \land n \in \mathbb{Z} \implies
+  \neq 0 \land x = m/n))
+  \\
+  \forall x,y ~ (x \in F \land y \in D \implies (Oxy \implies Bxy))
+\end{gather}
 
 \subsection*{Exercise 2.31}
 \begin{enumerate}
   \item
   The equation $x^2 + 1 = 0$ has a solution: \\
-  $\exists x~(x^2 + 1 = 0)$
+  \[ \exists x~(x^2 + 1 = 0) \]
 
   \item
   A largest natural number does not exist: \\
-  $\forall x \in \mathbb{N}~\exists y \in \mathbb{N}~(x < y)$
+  \[ \forall x \in \mathbb{N}~\exists y \in \mathbb{N}~(x < y) \]
 
   \item
   The number 13 is prime ($d||n$ means `$d$ divides $n$'): \\
-  $\forall d~(d||13 \implies d = 1 \lor d = 13)$
+  \[ \forall d~(d||13 \implies d = 1 \lor d = 13) \]
 
   \item
   The number $n$ is prime: \\
-  $\forall d~(n \neq 1 \land (d||n \implies d = 1 \lor d = n))$
+  \[ \forall d~(n \neq 1 \land (d||n \implies d = 1 \lor d = n)) \]
 
   \item
   There are infinitely many primes: \\
-  $\forall x~(\exists n \forall d~
-   (n \neq 1 \land (d||n \implies d = 1 \lor d = n) \land x < n))$
+  \[ \forall x~(\exists n \forall d~
+   (n \neq 1 \land (d||n \implies d = 1 \lor d = n) \land x < n)) \]
 \end{enumerate}
 
 \subsection*{Exercise 2.32}
 \begin{enumerate}
   \item
   Everyone loved Diana ($L(x,y)$ means `$x$ loved $y$', $d$ is Diana): \\
-  $\forall x ~ L(x,d)$
+  \[ \forall x ~ L(x,d) \]
 
   \item
   Diana loved everyone: \\
-  $\forall x ~ L(d,x)$
+  \[ \forall x ~ L(d,x) \]
 
   \item
   Man is mortal ($M(x)$ means `$x$ is a man', $M'(x)$ means `$x$ is mortal'): \\
-  $\forall x ~ (M(x) \implies M'(x)$
+  \[ \forall x ~ (M(x) \implies M'(x) \]
 
   \item
   Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'): \\
-  $\exists x ~ (B(x) \land \neg F(x))$
+  \[ \exists x ~ (B(x) \land \neg F(x)) \]
 \end{enumerate}
 
 \subsection*{Exercise 2.33}
