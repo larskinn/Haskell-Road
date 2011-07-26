@@ -810,4 +810,10 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
   \[ \lim_{n \to \infty} \frac{1}{n} = 0 \]
 \end{enumerate}
 
+\subsection*{Exercise 2.34}
+\begin{enumerate}
+  \item
+  Everyone loved Diana except Charles:
+\end{enumerate}
+
 \end{document}
