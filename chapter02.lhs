@@ -751,4 +751,28 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
   $\forall x,y (x \in F \land y \in D \implies (Oxy \implies Bxy))$
 \end{enumerate}
 
+\subsection*{Exercise 2.31}
+\begin{enumerate}
+  \item
+  The equation $x^2 + 1 = 0$ has a solution: \\
+  $\exists x~(x^2 + 1 = 0)$
+
+  \item
+  A largest natural number does not exist: \\
+  $\forall x \in \mathbb{N}~\exists y \in \mathbb{N}~(x < y)$
+
+  \item
+  The number 13 is prime ($d||n$ means `$d$ divides $n$'): \\
+  $\forall d~(d||13 \implies d = 1 \lor d = 13)$
+
+  \item
+  The number $n$ is prime: \\
+  $\forall d~(n \neq 1 \land (d||n \implies d = 1 \lor d = n))$
+
+  \item
+  There are infinitely many primes: \\
+  $\forall x~(\exists n \forall d~
+   (n \neq 1 \land (d||n \implies d = 1 \lor d = n) \land x < n))$
+\end{enumerate}
+
 \end{document}
