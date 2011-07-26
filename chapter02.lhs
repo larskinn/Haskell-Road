@@ -775,4 +775,22 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
    (n \neq 1 \land (d||n \implies d = 1 \lor d = n) \land x < n))$
 \end{enumerate}
 
+\subsection*{Exercise 2.32}
+\begin{enumerate}
+  \item
+  Everyone loved Diana ($L(x,y)$ means `$x$ loved $y$', $d$ is Diana): \\
+  $\forall x ~ L(x,d)$
+
+  \item
+  Diana loved everyone: \\
+  $\forall x ~ L(d,x)$
+
+  \item
+  Man is mortal ($M(x)$ means `$x$ is a man', $M'(x)$ means `$x$ is mortal'): \\
+  $\forall x ~ (M(x) \implies M'(x)$
+
+  \item
+  Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'): \\
+  $\exists x ~ (B(x) \land \neg F(x))$
+\end{enumerate}
 \end{document}
