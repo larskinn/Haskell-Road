@@ -731,24 +731,24 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
 \subsection*{Exercise 2.26}
 \begin{enumerate}
   \item
-  $\exists x,y \in \mathbb{Q} (x < y)$
+  $\exists x,y \in \mathbb{Q} ~ (x < y)$
 
   \item
-  $\forall x \in \mathbb{R} \exists y \in {R} (x < y)$
+  $\forall x \in \mathbb{R} ~ \exists y \in {R} ~ (x < y)$
 
   \item
-  $\forall x \in \mathbb{Z} ~ \exists m,n \in \mathbb{N} (x = m - n)$
+  $\forall x \in \mathbb{Z} ~ \exists m,n \in \mathbb{N} ~ (x = m - n)$
 \end{enumerate}
 
 \subsection*{Exercise 2.27}
 \begin{enumerate}
   \item
-  $\forall x (x \in \mathbb{Q} \implies
-   \exists m,n (m \in \mathbb{Z} \land n \in \mathbb{Z} \implies
+  $\forall x ~ (x \in \mathbb{Q} \implies
+   \exists m,n ~ (m \in \mathbb{Z} \land n \in \mathbb{Z} \implies
    n \neq 0 \land x = m/n))$
 
   \item
-  $\forall x,y (x \in F \land y \in D \implies (Oxy \implies Bxy))$
+  $\forall x,y ~ (x \in F \land y \in D \implies (Oxy \implies Bxy))$
 \end{enumerate}
 
 \subsection*{Exercise 2.31}
