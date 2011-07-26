@@ -784,7 +784,7 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
 
   \item
   Man is mortal ($M(x)$ means `$x$ is a man', $M'(x)$ means `$x$ is mortal'): \\
-  \[ \forall x ~ (M(x) \implies M'(x) \]
+  \[ \forall x ~ (M(x) \implies M'(x)) \]
 
   \item
   Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'): \\
