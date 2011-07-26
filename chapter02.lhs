@@ -793,4 +793,24 @@ Since $\Phi \iff \Psi$ is only true when $\Phi$ and $\Psi$ have the same truth v
   Some birds do not fly ($B(x)$ means `$x$ is a bird', $F(x)$ means `$x$ can fly'): \\
   $\exists x ~ (B(x) \land \neg F(x))$
 \end{enumerate}
+
+\subsection*{Exercise 2.33}
+\begin{enumerate}
+  \item
+  Dogs that bark do not bite: \\
+  \[ \forall x ~ (\text{Dog}(x) \land \text{Bark}(x) \implies \neg \text{Bite}(x)) \]
+
+  \item
+  All that glitters is not gold: \\
+  \[ \exists x ~ (\text{Glitters}(x) \land \neg \text{Gold}(x)) \]
+
+  \item
+  Friends of Diana's friends are her friends: \\
+  \[ \forall x,y ~ (\text{Friend}(d,x) \land \text{Friend}(x,y) \implies \text{Friend}(d,y)) \]
+
+  \item
+  The limit of $\frac{1}{n}$ as $n$ approaches infinity is zero: \\
+  \[ \lim_{n \to \infty} \frac{1}{n} = 0 \]
+\end{enumerate}
+
 \end{document}
